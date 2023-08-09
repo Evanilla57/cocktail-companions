@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 	<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -24,10 +25,18 @@
 
 		<section>Container for Recipes</section>
 
-		<section>Brewery area</section>
+		<section id="brew">
+			<h5>Too Fancy? Too much work???</h5>
+			<p>Use the search bar below to search bars and breweries in your area:</p>
+			<form id="brewForm" class="card-body">
+			  <input name="username" id="username" type="text" autofocus="true" class="form-input" />
+			  <button type="submit" class="btn">Search <i>Bar</i> 😉🍻</button>
+			</form>
+		</section>
 		
 	</main>
 	<foot>Cocktail Companions Incorporated, All Rights Reserved</foot>
 	<script src="assets/script.js"></script>
+	<script src="assets/brewery.js"></script>
 </body>
 </html>
