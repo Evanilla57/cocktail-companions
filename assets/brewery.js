@@ -1,12 +1,12 @@
 var brewFormEl = document.querySelector('#brewForm');
 var zipInputEl = document.querySelector('#zipInput');
-var brewDisEl = document.querySelector('#zipDisplay');
+var zipDisEl = document.querySelector('#zipDisplay');
 var brewContainerEl = document.querySelector('#brewContainer');
 
 
 var zipSubmitHandler = function (event) {
     event.preventDefault();
-    brewDisEl.textContent = zipInputEl.value.trim();
+
     var zipCode = zipInputEl.value.trim();
 
 
@@ -44,11 +44,13 @@ var getBrew = function (zipCode) {
 
 var brewery = [];
 
-var displayBrews = function (brewery, brewDisEl) {
+var displayBrews = function (brewery, zipSearch) {
     if (brewery.length === 0) {
         brewContainerEl.textContent = 'No breweries found.';
         return;
     }
+
+    zipDisEl.textContent = zipSearch;
 
     for (var i = 0; i < brewery.length; i++) {
 
@@ -58,6 +60,8 @@ var displayBrews = function (brewery, brewDisEl) {
 
         var locationEl = document.createElement('li');
         locationEl.classList = 'list-item flex-row justify-space-between align-center';
+
+        locationEl.textContent = brewName
 
         brewContainerEl.appendChild(locationEl);
     }
