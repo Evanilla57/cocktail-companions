@@ -13,7 +13,7 @@ var zipSubmitHandler = function (event) {
     if (zipCode) {
         getBrew(zipCode);
         //may need to add different text
-        brewContainerEl.textContent = '';
+        // brewContainerEl.textContent = '';
         zipInputEl.value = '';
     } else {
         alert('Please enter a valid zipcode');
@@ -26,9 +26,7 @@ var getBrew = function (zipCode) {
     fetch(apiUrl)
         .then(function (response) {
             if (response.ok) {
-                console.log(response);
                 response.json().then(function (data) {
-                    console.log(data);
                     displayBrews(data, zipCode);
                 });
                 //is this doing anything?
@@ -42,19 +40,17 @@ var getBrew = function (zipCode) {
 };
 
 
-var brewery = [];
-
 var displayBrews = function (breweryData, zipSearch) {
-    if (brewery.length === 0) {
+    if (breweryData.length === 0) {
         brewContainerEl.textContent = 'No breweries found.';
         return;
     }
 
     zipDisEl.textContent = zipSearch;
 
-    for (var i = 0; i < brewery.length; i++) {
+    for (var i = 0; i < breweryData.length; i++) {
 
-        var brewName = data[i].name;
+        var brewName = breweryData[i].name;
 
         console.log(brewName);
 
@@ -68,5 +64,3 @@ var displayBrews = function (breweryData, zipSearch) {
 };
 
 brewFormEl.addEventListener('submit', zipSubmitHandler);
-
-console.log(brewery)
