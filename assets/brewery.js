@@ -7,7 +7,7 @@ var brewContainerEl = document.querySelector('#brewContainer');
 var zipSubmitHandler = function (event) {
     event.preventDefault();
 
-    var zipCode = zipInputEl.value.trim();
+    let zipCode = zipInputEl.value.trim();
 
 
     if (zipCode) {
@@ -44,7 +44,7 @@ var getBrew = function (zipCode) {
 
 var brewery = [];
 
-var displayBrews = function (brewery, zipSearch) {
+var displayBrews = function (breweryData, zipSearch) {
     if (brewery.length === 0) {
         brewContainerEl.textContent = 'No breweries found.';
         return;
@@ -54,7 +54,7 @@ var displayBrews = function (brewery, zipSearch) {
 
     for (var i = 0; i < brewery.length; i++) {
 
-        var brewName = brewery[i].name
+        var brewName = data[i].name;
 
         console.log(brewName);
 
