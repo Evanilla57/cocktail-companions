@@ -9,14 +9,12 @@ var zipSubmitHandler = function (event) {
 
     let zipCode = zipInputEl.value.trim();
 
-
     if (zipCode) {
         getBrew(zipCode);
-        //may need to add different text
-        // brewContainerEl.textContent = '';
         zipInputEl.value = '';
     } else {
-        alert('Please enter a valid zipcode');
+        zipDisEl.textContent = 'Please enter a valid zipcode.';
+        return;
     }
 };
 
@@ -25,34 +23,24 @@ var getBrew = function (zipCode) {
 
     fetch(apiUrl)
         .then(function (response) {
-            if (response.ok) {
                 response.json().then(function (data) {
-                    displayBrews(data, zipCode);
+                displayBrews(data, zipCode);
                 });
-                //is this doing anything?
-            } else {
-                alert('Error: ' + response.statusText);
-            }
-        })
-        .catch(function (error) {
-            alert('Unable to connect to find breweries');
-        });
-};
+})};
 
 
 var displayBrews = function (breweryData, zipSearch) {
+    zipDisEl.textContent = zipSearch;
     if (breweryData.length === 0) {
         brewContainerEl.textContent = 'No breweries found.';
         return;
     }
 
-    zipDisEl.textContent = zipSearch;
+    kill();
 
     for (var i = 0; i < breweryData.length; i++) {
 
         var brewName = breweryData[i].name;
-
-        console.log(brewName);
 
         var locationEl = document.createElement('li');
         locationEl.classList = 'list-item flex-row justify-space-between align-center';
@@ -64,3 +52,10 @@ var displayBrews = function (breweryData, zipSearch) {
 };
 
 brewFormEl.addEventListener('submit', zipSubmitHandler);
+
+//function to remove previous children
+function kill() {
+    while (brewContainerEl.firstChild) {
+        brewContainerEl.removeChild(brewContainerEl.firstChild);
+    }
+};
