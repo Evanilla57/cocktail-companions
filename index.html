@@ -25,11 +25,15 @@
 			<h5>Too Fancy? Too much work???</h5>
 			<p>Use the search bar below to search bars and breweries in your area:</p>
 			<form id="brewForm" class="card-body">
-			  <input name="username" id="username" type="text" autofocus="true" class="form-input" />
+			  <input id="brewInput" name="username" type="text" autofocus="true" class="form-input" />
 			  <button type="submit" class="btn">Search <i>Bar</i> 😉🍻</button>
 			</form>
 		</section>
-		
+		<section>
+			<h2>Showing Breweries Near:
+			  <span id="brewSearch"></span>
+			</h2>
+			<div id="brewContainer" class="list-group"></div>
 	</main>
 	<foot>Cocktail Companions Incorporated, All Rights Reserved</foot>
 	<script src="assets/script.js"></script>
