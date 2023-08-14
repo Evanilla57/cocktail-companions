@@ -4,24 +4,45 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recipe Details</title>
+    <title>Featured Drinks</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
   </head>
   <body>
-    <header>
-      <h1>Recipe Details</h1>
+    <header class="hero has-background-primary">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title is-size-2 has-text-white">Featured Drinks</h1>
+        </div>
+      </div>
     </header>
-    <main>
-      <section id="recipe-details">
-        <h2 id="recipe-name">Selected Recipe Name</h2>
-        <img id="drink-image" src="" alt="Drink Image" />
-        <h3>Ingredients:</h3>
-        <ul id="ingredients-list"></ul>
-        <h3>Instructions:</h3>
-        <p id="recipe-instructions"></p>
-      </section>
+
+    <main class="section">
+      <div class="container">
+        <section class="box">
+          <h2 class="title is-size-3">Selected Recipe</h2>
+          <div class="columns">
+            <div class="column is-one-third">
+              <h3 class="subtitle is-size-5">Drink Name:</h3>
+              <h4 id="recipe-name" class="is-size-5"></h4>
+              <img id="drink-image" src="" alt="Drink Image" />
+            </div>
+            <div class="column">
+              <h3 class="subtitle is-size-5">Ingredients:</h3>
+              <ul id="ingredients-list"></ul>
+            </div>
+          </div>
+          <h3 class="subtitle is-size-5">Instructions:</h3>
+          <p id="recipe-instructions" class="content"></p>
+        </section>
+      </div>
     </main>
-    <footer>
-      <p>Cocktail Companions Incorporated, All Rights Reserved</p>
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>Cocktail Companions Incorporated, All Rights Reserved</p>
+      </div>
     </footer>
     <script src="./assets/featured.drinks.js"></script>
   </body>
