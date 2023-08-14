@@ -11,7 +11,7 @@ window.onload = function () {
     )
       .then((response) => response.json())
       .then((data) => {
-        const recipe = data.drinks[0];
+        var recipe = data.drinks[0];
 
         console.log("Fetched Recipe Details:", recipe);
 
@@ -27,6 +27,11 @@ window.onload = function () {
             ingredientsList.appendChild(ingredient);
           }
         }
+
+        // After updating the recipe name and other elements
+        var drinkImage = document.getElementById("drink-image");
+        drinkImage.src = recipe.strDrinkThumb; // Use the correct property for the image URL
+        drinkImage.alt = recipe.strDrink; // Set alt text for accessibility
 
         // Populate recipe instructions
         document.getElementById("recipe-instructions").textContent =

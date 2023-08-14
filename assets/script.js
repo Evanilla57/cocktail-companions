@@ -15,7 +15,7 @@ window.onload = function () {
   request.onload = function () {
     if (request.status >= 200 && request.status < 400) {
       var data = JSON.parse(request.responseText);
-      var featuredRecipes = data.drinks.slice(0, 3); // Get the first three recipes
+      var featuredRecipes = data.drinks.slice(3, 9); // Get drinks from index 3-5
 
       featuredRecipes.forEach(function (recipe) {
         var recipeItem = document.createElement("li");
@@ -26,7 +26,6 @@ window.onload = function () {
         recipeItem.addEventListener("click", function () {
           window.location.href =
             "featured.drinks.html?recipeId=" + recipe.idDrink;
-          // Implement navigation to recipe details page using var
         });
       });
     } else {
