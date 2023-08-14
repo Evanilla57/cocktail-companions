@@ -1,42 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Cocktail Companion</title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-	<link rel="stylesheet" href="assets/style.css">
-</head>
-<body>
-	<header><h1>Cocktail Companion - Your Personal Mixologist</h1> 
-	</header>
-	<main>
-		<!--TODO: place text into h3's, organize using flex box-->
-		<section>
-			<h3>Please input your ingredients:</h3>
-			<input class="user-input" id="user-ingredients" type = "text" placeholder="Ingredients">
-			<button class="submit-button">Submit </button>
-		</section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cocktail Companion</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <header><h1>Cocktail Companion - Your Personal Mixologist</h1></header>
+    <main>
+      <!--TODO: place text into h3's, organize using flex box-->
+      <section>
+        <h3>Please input your ingredients:</h3>
+        <input
+          class="user-input"
+          id="user-ingredients"
+          type="text"
+          placeholder="Ingredients"
+        />
+        <button class="submit-button">Submit</button>
+      </section>
 
-		<section>Try these recipes:</section>
+      <section id="suggested-recipes">
+        <h3>Featured Drinks:</h3>
+        <ul class="featured-recipe-list" id="featured-recipes-container"></ul>
+      </section>
 
-		<section>Here is a list of recipes you can make with the ingredients you have inputted:</section>
+      <section>
+        Here is a list of recipes you can make with the ingredients you have
+        inputted:
+      </section>
 
-		<section>Container for Recipes</section>
+      <section>Container for Recipes</section>
 
-		<section id="brew">
-			<h5>Too Fancy? Too much work???</h5>
-			<p>Use the search bar below to search bars and breweries in your area:</p>
-			<form id="brewForm" class="card-body">
-			  <input name="username" id="username" type="text" autofocus="true" class="form-input" />
-			  <button type="submit" class="btn">Search <i>Bar</i> 😉🍻</button>
-			</form>
-		</section>
-		
-	</main>
-	<foot>Cocktail Companions Incorporated, All Rights Reserved</foot>
-	<script src="assets/script.js"></script>
-	<script src="assets/brewery.js"></script>
-</body>
+      <section id="brew">
+        <h5>Too Fancy? Too much work???</h5>
+        <p>
+          Use the search bar below to search bars and breweries in your area:
+        </p>
+        <form id="brewForm" class="card-body">
+          <input
+            name="username"
+            id="username"
+            type="text"
+            autofocus="true"
+            class="form-input"
+          />
+          <button type="submit" class="btn">Search <i>Bar</i> 😉🍻</button>
+        </form>
+      </section>
+    </main>
+    <footer>Cocktail Companions Incorporated, All Rights Reserved</footer>
+    <script src="assets/script.js"></script>
+    <script src="assets/brewery.js"></script>
+  </body>
 </html>
