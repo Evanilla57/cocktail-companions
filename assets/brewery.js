@@ -25,10 +25,11 @@ var getBrew = function (zipCode) {
 
     fetch(apiUrl)
         .then(function (response) {
-                response.json().then(function (data) {
+            response.json().then(function (data) {
                 displayBrews(data, zipCode);
-                });
-})};
+            });
+        })
+};
 
 // Variable for function to display and append fetched data below the search form
 var displayBrews = function (breweryData, zipSearch) {
