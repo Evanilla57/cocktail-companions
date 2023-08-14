@@ -25,7 +25,7 @@ window.onload = function () {
 
         recipeItem.addEventListener("click", function () {
           window.location.href =
-            "featured-drinks.html?recipeId=" + recipe.idDrink;
+            "featured.drinks.html?recipeId=" + recipe.idDrink;
           // Implement navigation to recipe details page using var
         });
       });
