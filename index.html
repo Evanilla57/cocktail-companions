@@ -38,25 +38,23 @@
 
       <section>Container for Recipes</section>
 
-      <section id="brew">
-        <h5>Too Fancy? Too much work???</h5>
-        <p>
-          Use the search bar below to search bars and breweries in your area:
-        </p>
-        <form id="brewForm" class="card-body">
-          <input
-            name="username"
-            id="username"
-            type="text"
-            autofocus="true"
-            class="form-input"
-          />
-          <button type="submit" class="btn">Search <i>Bar</i> 😉🍻</button>
-        </form>
-      </section>
-    </main>
-    <footer>Cocktail Companions Incorporated, All Rights Reserved</footer>
-    <script src="assets/script.js"></script>
-    <script src="assets/brewery.js"></script>
-  </body>
+		<section id="brew">
+			<h5>Too Fancy? Too much work???</h5>
+			<p>Use the search bar below to search bars and breweries in your area:</p>
+			<form id="brewForm" class="card-body">
+			  <input id="zipInput" name="username" type="text" autofocus="true" class="form-input" />
+			  <button type="submit" class="btn">Search <i>Bar</i> 😉🍻</button>
+			</form>
+		</section>
+		<section>
+			<h2>Showing Breweries Near:
+			  <span id="zipDisplay"></span>
+			</h2>
+			<div id="brewContainer" class="list-group"></div>
+	</main>
+	<footer>Cocktail Companions Incorporated, All Rights Reserved</footer>
+	<script src="assets/script.js"></script>
+	<script src="assets/brewery.js"></script>
+</body>
 </html>
+
