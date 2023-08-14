@@ -41,13 +41,9 @@ var displayBrews = function (breweryData, zipSearch) {
     kill();
 
     for (var i = 0; i < breweryData.length; i++) {
-
         var brewName = breweryData[i].name;
-
         var locationEl = document.createElement('li');
-
         locationEl.textContent = brewName
-
         brewContainerEl.appendChild(locationEl);
     }
 };
