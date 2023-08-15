@@ -1,41 +1,42 @@
-var featuredRecipesContainer = document.getElementById(
-  "featured-recipes-container"
-);
 
-var apiKey = "9973533";
 
-window.onload = function () {
-  var request = new XMLHttpRequest();
+// var apiKey = "9973533";
 
-  request.open(
-    "GET",
-    `https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail`,
-    true
-  );
-  request.onload = function () {
-    if (request.status >= 200 && request.status < 400) {
-      var data = JSON.parse(request.responseText);
-      var featuredRecipes = data.drinks.slice(3, 9); // Get drinks from index 3-5
 
-      featuredRecipes.forEach(function (recipe) {
-        var recipeItem = document.createElement("li");
-        recipeItem.className = "featured-recipe";
-        recipeItem.textContent = recipe.strDrink;
-        featuredRecipesContainer.appendChild(recipeItem);
+var ingredientFormEl = document.querySelector('#ingredient-form');
+var userIngredientEl = document.querySelector('#user-ingredients');
+var recipeContainerEl = document.querySelector('#recipe-container');
 
-        recipeItem.addEventListener("click", function () {
-          window.location.href =
-            "featured.drinks.html?recipeId=" + recipe.idDrink;
-        });
-      });
-    } else {
-      console.log("Error fetching data from the API.");
-    }
-  };
+var recipeSubmitHandler = function (event) {
+  console.log(event);
+  event.preventDefault();
 
-  request.onerror = function () {
-    console.log("Connection error.");
-  };
+  let recipe = userIngredientEl.value.trim();
 
-  request.send();
+  if (recipe) {
+    getRecipe(recipe);
+    recipeContainerEl.value = '';
+    // If ingredient is invalid, error message will display and function will stop running
+  } else {
+    recipeContainerEl.textContent = 'Please enter a valid ingredient';
+    return;
+  }
 };
+
+
+var getRecipe = function (recipe) {
+  var apiUrl = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=' + recipe;
+
+  fetch(apiUrl).then(function (response) {
+    return response.json();
+  }).then(function (data) {
+    console.log(data);
+    // 1. create ul element in memory (var ul = document.createElement('ul'))
+    // 2. loop through data.drinks
+    // 3. for each drink, create li element
+    // 4. append li to ul 
+    // 5. when loop finished, append ul to recipeContainerEl
+  })
+};
+
+ingredientFormEl.addEventListener("submit", recipeSubmitHandler);

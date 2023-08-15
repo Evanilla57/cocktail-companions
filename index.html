@@ -19,13 +19,10 @@
       <!--TODO: place text into h3's, organize using flex box-->
       <section class="column is-half">
         <h3>Please input your ingredients:</h3>
-        <input class="user-input" id="user-ingredients" type="text" placeholder="Ingredients" />
-        <button class="submit-button">Submit</button>
-      </section>
-
-      <section class="column is-half">
-        Here is a list of recipes you can make with the ingredients you have
-        inputted:
+        <form id="ingredient-form">
+          <input class="user-input" id="user-ingredients" type="text" placeholder="Ingredients" />
+          <button class="submit-button" type="submit">Submit</button>
+        </form>
       </section>
 
       <section id="suggested-recipes" class="column is-half">
@@ -33,10 +30,14 @@
         <ul class="featured-recipe-list" id="featured-recipes-container"></ul>
       </section>
 
+      <!-- title above where recipes will populate -->
+      <section class="column is-half">
+        Here is a list of recipes you can make with the ingredients you have
+        inputted:
+      </section>
+      <!-- recipe container where they will populate -->
+      <section class="column is-half" id="recipe-container">Container for Recipes
 
-      <section class="column is-half">Container for Recipes
-
-        
       </section>
 
       <section id="brew" class="columns is-mobile is-centered container">
@@ -45,25 +46,25 @@
           Use the search bar below to search bars and breweries in your area:
         </p>
         <form id="brewForm" class="field has-addons control">
-          <input id="zipInput" class="input" type="text" placeholder="Enter Zip Code"/>
+          <input id="zipInput" class="input" type="text" placeholder="Enter Zip Code" />
           <button button type="submit" class="button is-primary">
-			Search <i>Bar</i> 😉🍻
-		</button>
+            Search <i>Bar</i> 😉🍻
+          </button>
         </form>
       </section>
 
-	  <section class="section container">
-		<h2 class="title is-5">Showing Breweries Near:
-		<span id="zipDisplay"></span>
-		</h2>
-		<div id="brewContainer" class="list"></div>
-	  </section>
+      <section class="section container">
+        <h2 class="title is-5">Showing Breweries Near:
+          <span id="zipDisplay"></span>
+        </h2>
+        <div id="brewContainer" class="list"></div>
+      </section>
 
-  </main>
-  <footer>Cocktail Companions Incorporated, All Rights Reserved</footer>
-  <script src="assets/script.js"></script>
-  <script src="assets/brewery.js"></script>
-</section>
+    </main>
+    <footer>Cocktail Companions Incorporated, All Rights Reserved</footer>
+    <script src="assets/script.js"></script>
+    <script src="assets/brewery.js"></script>
+  </section>
 </body>
 
 </html>
