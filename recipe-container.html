@@ -1,49 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recipes</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-</head>
-<main>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+  </head>
+  <main>
     <header class="hero is-success">
-        <div class="hero-body">
-            <div class="container">
-                <h1 class="title is-size-1 has-text-white">Recipe</h1>
-            </div>
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title is-size-1 has-text-white">Recipe</h1>
         </div>
+      </div>
     </header>
 
     <main class="section">
-        <div class="container">
-            <h2 class="title is-size-2">Recipe you have chosen</h2>
-            <div class="columns">
-                <div class="column is-one-quarter">
-                    <h3 class="subtitle is-size-4">Drink Name:</h3>
-                    <h4 id="recipe-name" class="is-size-3"></h4>
-                    <img id="drink-image" src="" alt="Drink Image" />
-                </div>
-                <div class="column">
-                    <h3 class="subtitle is-size-4">Ingredients:</h3>
-                    <ul id="ingredients-list"></ul>
-                </div>
-            </div>
-            <h3 class="subtitle is-size-4">Instructions:</h3>
-            <p id="recipe-instructions" class="content"></p>
+      <div class="container">
+        <h2 class="title is-size-2">Recipe you have chosen</h2>
+        <div class="columns">
+          <div class="column is-one-quarter">
+            <h3 class="subtitle is-size-4">Drink Name:</h3>
+            <h4 id="recipe-name" class="is-size-3"></h4>
+            <img id="drink-image" src="" alt="Drink Image" />
+          </div>
+          <div class="column">
+            <h3 class="subtitle is-size-4">Ingredients:</h3>
+            <ul id="ingredients-list"></ul>
+          </div>
         </div>
+        <h3 class="subtitle is-size-4">Instructions:</h3>
+        <p id="recipe-instructions" class="content"></p>
+      </div>
     </main>
 
     <footer class="footer">
-        <div class="content has-text-centered">
-            <p>
-                <strong>Cocktail Companions Incorporated,</strong> All Rights Reserved
-            </p>
-        </div>
+      <div class="content has-text-centered">
+        <p>
+          <strong>Cocktail Companions Incorporated,</strong> All Rights Reserved
+        </p>
+      </div>
     </footer>
 
     <script src="./assets/recipe-container.js"></script>
-</main>
-
+  </main>
 </html>

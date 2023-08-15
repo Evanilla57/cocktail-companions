@@ -5,15 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Featured Drinks</title>
+    <!-- Link to the Bulma CSS framework -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
   </head>
   <body>
+    <!-- Hero header with background color -->
     <header class="hero has-background-primary">
       <div class="hero-body">
         <div class="container">
+          <!-- Page title with white text color -->
           <h1 class="title is-size-2 has-text-white">Featured Drinks</h1>
         </div>
       </div>
@@ -21,24 +24,35 @@
 
     <main class="section">
       <div class="container">
+        <!-- Box section containing selected recipe details -->
         <section class="box">
+          <!-- Title for the selected recipe section -->
           <h2 class="title is-size-3">Selected Recipe</h2>
           <div class="columns">
+            <!-- Column for drink name and image -->
             <div class="column is-one-third">
               <h3 class="subtitle is-size-5">Drink Name:</h3>
+              <!-- Placeholder for the recipe name -->
               <h4 id="recipe-name" class="is-size-5"></h4>
+              <!-- Placeholder for the drink image -->
               <img id="drink-image" src="" alt="Drink Image" />
             </div>
+            <!-- Column for ingredients list -->
             <div class="column">
               <h3 class="subtitle is-size-5">Ingredients:</h3>
+              <!-- Placeholder for the ingredients list -->
               <ul id="ingredients-list"></ul>
             </div>
           </div>
+          <!-- Subtitle for recipe instructions -->
           <h3 class="subtitle is-size-5">Instructions:</h3>
+          <!-- Placeholder for recipe instructions -->
           <p id="recipe-instructions" class="content"></p>
         </section>
       </div>
     </main>
+
+    <!-- Footer section with centered content -->
     <footer class="footer">
       <div class="content has-text-centered">
         <p>Cocktail Companions Incorporated, All Rights Reserved</p>
