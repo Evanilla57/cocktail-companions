@@ -1,3 +1,4 @@
+// This function is executed when the page finishes loading
 window.onload = function () {
   // Get the selected recipe ID from the URL query parameters
   var urlParams = new URLSearchParams(window.location.search);
