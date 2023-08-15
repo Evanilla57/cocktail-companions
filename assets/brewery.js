@@ -1,3 +1,8 @@
+// To test all three scenarios, a user can test the following zipcodes:
+// 92592: Text will appear with "No breweries found."
+// 92101: Will display closest five breweries
+// If an invalid zipcode is selected: Text will display "Please enter a valid zipcode."
+
 // Variables targetting HTML id's
 var brewFormEl = document.querySelector('#brewForm');
 var zipInputEl = document.querySelector('#zipInput');
