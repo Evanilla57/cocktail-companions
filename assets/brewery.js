@@ -11,8 +11,10 @@ var brewContainerEl = document.querySelector('#brewContainer');
 
 // Variable for function to accept zipcode data from zipcode form
 var zipSubmitHandler = function (event) {
+    // 
     event.preventDefault();
 
+    // Trimming spaces outside of value
     let zipCode = zipInputEl.value.trim();
 
     if (zipCode) {
@@ -48,8 +50,13 @@ var displayBrews = function (breweryData, zipSearch) {
 
     for (var i = 0; i < breweryData.length; i++) {
         var brewName = breweryData[i].name;
+        var brewUrl = breweryData[i].website_url;
         var locationEl = document.createElement('li');
-        locationEl.textContent = brewName
+        var linkEl = document.createElement('a');
+        linkEl.href = brewUrl;
+        linkEl.textContent = brewName;
+        
+        locationEl.appendChild(linkEl);
         brewContainerEl.appendChild(locationEl);
     }
 };
