@@ -36,16 +36,26 @@
 
       <section class="column is-half">Container for Recipes</section>
 
-      <section id="brew" class="columns is-mobile is-centered">
-        <h5>Too Fancy? Too much work???</h5>
+      <section id="brew" class="columns is-mobile is-centered container">
+        <h5 class="title is-5">Too Fancy? Too much work???</h5>
         <p>
           Use the search bar below to search bars and breweries in your area:
         </p>
-        <form id="brewForm" class="card-body">
-          <input name="username" id="username" type="text" autofocus="true" class="form-input" />
-          <button type="submit" class="btn">Search <i>Bar</i> 😉🍻</button>
+        <form id="brewForm" class="field has-addons control">
+          <input id="zipInput" class="input" type="text" placeholder="Enter Zip Code"/>
+          <button button type="submit" class="button is-primary">
+			Search <i>Bar</i> 😉🍻
+		</button>
         </form>
       </section>
+
+	  <section class="section container">
+		<h2 class="title is-5">Showing Breweries Near:
+		<span id="zipDisplay"></span>
+		</h2>
+		<div id="brewContainer" class="list"></div>
+	  </section>
+
   </main>
   <footer>Cocktail Companions Incorporated, All Rights Reserved</footer>
   <script src="assets/script.js"></script>
