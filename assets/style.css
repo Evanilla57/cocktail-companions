@@ -5,4 +5,12 @@
 body {
 	background-color: #e5e7eb;
 	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+header{
+	text-align: center;
+}
+#brew{
+	width: 100%;
+	text-align: center;
 }
