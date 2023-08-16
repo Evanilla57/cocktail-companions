@@ -62,6 +62,8 @@ window.onload = function () {
 var ingredientFormEl = document.querySelector('#ingredient-form');
 var userIngredientEl = document.querySelector('#user-ingredients');
 var recipeContainerEl = document.querySelector('#recipe-container');
+var ingredientContainerEl = document.querySelector('#ingredient-container');
+
 
 var recipeSubmitHandler = function (event) {
   console.log(event);
@@ -117,7 +119,19 @@ var displayRecipes = function (drinks) {
   recipeContainerEl.appendChild(ul);
 };
 
+var ingredientSubmission = function(event){
+  event.preventDefault();
+  var wordArray = userIngredientEl.value.trim();
+  console.log(wordArray);
+  var divEl = document.createElement('div');
+  divEl.textContent = wordArray;
+  ingredientContainerEl.appendChild(divEl);
+};
+
+
+
 ingredientFormEl.addEventListener("submit", recipeSubmitHandler);
+ingredientFormEl.addEventListener("submit", ingredientSubmission);
 
 // 1. create ul element in memory (var ul = document.createElement('ul'))
     // 2. loop through data.drinks
