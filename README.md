@@ -21,11 +21,11 @@ Brewery Search: If you're looking for bars and breweries in your area, navigate 
 
 ## Usage
 
-[picture to be included]
+![deployed site](<./assets/images/Screenshot 2023-08-15 213932.png>)
 
 ## Links
-![deployed site](<./assets/images/Screenshot 2023-08-15 213932.png>)
-- Link to deployed website: 
+
+- Link to deployed website: https://evanilla57.github.io/cocktail-companions/
 - Link to Github repository:https://github.com/Evanilla57/cocktail-companions
 
 ## Credits
@@ -79,7 +79,7 @@ SOFTWARE.
 
 ## Acknowledgements
 
-we would like to express gratitude and appreciation to the following individuals, study groups, and AskBCS Learning Assistant for their contributions and support during the completion of this project:
+We would like to express gratitude and appreciation to the following individuals, study groups, and AskBCS Learning Assistant for their contributions and support during the completion of this project:
 
 Josh Taylor- For their course materials and resources provided, including lecture slides, tutorials, and code examples. These materials have been invaluable in helping us grasp the concepts and apply them to create this project.
 
