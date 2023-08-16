@@ -24,9 +24,9 @@ Brewery Search: If you're looking for bars and breweries in your area, navigate 
 [picture to be included]
 
 ## Links
-
-Deployment link-
-Github Repo-
+![deployed site](<./assets/images/Screenshot 2023-08-15 213932.png>)
+- Link to deployed website: 
+- Link to Github repository:https://github.com/Evanilla57/cocktail-companions
 
 ## Credits
 
