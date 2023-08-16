@@ -19,6 +19,16 @@ Additional Features
 Brewery Search: If you're looking for bars and breweries in your area, navigate to the "Breweries" section and use the search bar to find nearby options. Sample zipcodes include:
 ​
 
+## Technologies used
+
+HTML
+CSS (with Bulma)
+JavaScript
+CocktailDB
+OpenBreweryDB API
+VSCode
+GitHub
+
 ## Usage
 
 [picture to be included]
@@ -57,7 +67,7 @@ The Coding Boot Camp at UCR Extension: 06-Serverside-APIs/22-Stu_Review-Part-One
 ​
 MIT License
 ​
-Copyright (c) [2023] []
+Copyright (c) [2023] [Stephany Placito, Evan Griggs, Neftali Percastegui, Marc Hernandez]
 ​
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
