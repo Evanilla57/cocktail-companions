@@ -89,6 +89,7 @@ var getRecipe = function (recipe) {
     return response.json();
   }).then(function (data) {
     displayRecipes(data.drinks);
+    console.log(data);
     });
   };
 
@@ -105,7 +106,7 @@ var displayRecipes = function (drinks) {
     // 4. Create anchor element (<a>) for each drink
     var drinkLink = document.createElement('a');
     drinkLink.textContent = drinks[i].strDrink;
-    drinkLink.href = 'recipe.html?drink=' + encodeURIComponent(drinks[i].strDrink); // Create a URL with the drink name as a parameter
+    drinkLink.href = 'recipe-container.html?drink=' + encodeURIComponent(drinks[i].strDrink); // Create a URL with the drink name as a parameter
 
     // 5. Append anchor to li
     li.appendChild(drinkLink);
