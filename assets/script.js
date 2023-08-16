@@ -63,7 +63,7 @@ var ingredientFormEl = document.querySelector('#ingredient-form');
 var userIngredientEl = document.querySelector('#user-ingredients');
 var recipeContainerEl = document.querySelector('#recipe-container');
 var ingredientContainerEl = document.querySelector('#ingredient-container');
-
+const changeText = document.querySelector('#ingredient-container');
 
 var recipeSubmitHandler = function (event) {
   console.log(event);
@@ -89,6 +89,7 @@ var getRecipe = function (recipe) {
     return response.json();
   }).then(function (data) {
     displayRecipes(data.drinks);
+    console.log(data);
     });
   };
 
@@ -105,7 +106,7 @@ var displayRecipes = function (drinks) {
     // 4. Create anchor element (<a>) for each drink
     var drinkLink = document.createElement('a');
     drinkLink.textContent = drinks[i].strDrink;
-    drinkLink.href = 'recipe.html?drink=' + encodeURIComponent(drinks[i].strDrink); // Create a URL with the drink name as a parameter
+    drinkLink.href = 'recipe-container.html?drink=' + encodeURIComponent(drinks[i].strDrink); // Create a URL with the drink name as a parameter
 
     // 5. Append anchor to li
     li.appendChild(drinkLink);
@@ -123,16 +124,13 @@ var ingredientSubmission = function(event){
   event.preventDefault();
   var wordArray = userIngredientEl.value.trim();
   console.log(wordArray);
-  var divEl = document.createElement('div');
-  divEl.textContent = wordArray;
-  ingredientContainerEl.appendChild(divEl);
+    changeText.textContent = wordArray;
 };
 
 
 
 ingredientFormEl.addEventListener("submit", recipeSubmitHandler);
 ingredientFormEl.addEventListener("submit", ingredientSubmission);
-
 // 1. create ul element in memory (var ul = document.createElement('ul'))
     // 2. loop through data.drinks
     // 3. for each drink, create li element
