@@ -17,51 +17,54 @@
     </header>
     <main class="columns is-multiline is-mobile">
       <!--TODO: place text into h3's, organize using flex box-->
-      <form id="ingredient-form">
-        <section class="column is-half">
-          <h3>Please input your ingredients:</h3>
+      <section class="column is-half">
+        <h3>Please input the ingredient you want to use:</h3>
+        <form id="ingredient-form">
           <input class="user-input" id="user-ingredients" type="text" placeholder="Ingredients" />
           <button class="submit-button">Submit</button>
-      </form>
-  </section>
+          <div id="ingredient-container">Ingredient You Chose</div>
+        </form>
+      </section>
 
-  <section class="column is-half">
-    Here is a list of recipes you can make with the ingredients you have
-    inputted:
-  </section>
+      <section class="column is-half">
+        Here is a list of recipes you can make with the ingredients you have
+        inputted:
+      </section>
 
-  <section id="suggested-recipes" class="column is-half">
-    <h3>Featured Drinks:</h3>
-    <ul class="featured-recipe-list" id="featured-recipes-container"></ul>
-  </section>
+      <section id="suggested-recipes" class="column is-half">
+        <h3>Featured Drinks:</h3>
+        <ul class="featured-recipe-list" id="featured-recipes-container"></ul>
+      </section>
+
 
   <section class="column is-half" id="recipe-container"></section>
 
-  <section id="brew" class="columns is-mobile is-centered container">
-    <h5 class="title is-5">Too Fancy? Too much work???</h5>
-    <p>
-      Use the search bar below to search bars and breweries in your area:
-    </p>
-    <form id="brewForm" class="field has-addons control">
-      <input id="zipInput" class="input" type="text" placeholder="Enter Zip Code" />
-      <button button type="submit" class="button is-primary">
-        Search <i>Bar</i> 😉🍻
-      </button>
-    </form>
-  </section>
 
-  <section class="section container">
-    <h2 class="title is-5">
-      Showing Breweries Near:
-      <span id="zipDisplay"></span>
-    </h2>
-    <div id="brewContainer" class="list"></div>
-  </section>
-  </main>
-  <footer>Cocktail Companions Incorporated, All Rights Reserved</footer>
-  <script src="assets/script.js"></script>
-  <script src="assets/brewery.js"></script>
-  <script src="./assets/recipe-container.js"></script>
+      <section id="brew" class="columns is-mobile is-centered container">
+        <h5 class="title is-5">Too Fancy? Too much work???</h5>
+        <p>
+          Use the search bar below to search bars and breweries in your area:
+        </p>
+        <form id="brewForm" class="field has-addons control">
+          <input id="zipInput" class="input" type="text" placeholder="Enter Zip Code" />
+          <button button type="submit" class="button is-primary">
+            Search <i>Bar</i> 😉🍻
+          </button>
+        </form>
+      </section>
+
+      <section class="section container">
+        <h2 class="title is-5">
+          Showing Breweries Near:
+          <span id="zipDisplay"></span>
+        </h2>
+        <div id="brewContainer" class="list"></div>
+      </section>
+    </main>
+    <footer>Cocktail Companions Incorporated, All Rights Reserved</footer>
+    <script src="assets/script.js"></script>
+    <script src="assets/brewery.js"></script>
+    <script src="./assets/recipe-container.js"></script>
   </section>
 </body>
 

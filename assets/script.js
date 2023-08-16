@@ -62,6 +62,8 @@ window.onload = function () {
 var ingredientFormEl = document.querySelector('#ingredient-form');
 var userIngredientEl = document.querySelector('#user-ingredients');
 var recipeContainerEl = document.querySelector('#recipe-container');
+var ingredientContainerEl = document.querySelector('#ingredient-container');
+const changeText = document.querySelector('#ingredient-container');
 
 var recipeSubmitHandler = function (event) {
   console.log(event);
@@ -118,8 +120,17 @@ var displayRecipes = function (drinks) {
   recipeContainerEl.appendChild(ul);
 };
 
-ingredientFormEl.addEventListener("submit", recipeSubmitHandler);
+var ingredientSubmission = function(event){
+  event.preventDefault();
+  var wordArray = userIngredientEl.value.trim();
+  console.log(wordArray);
+    changeText.textContent = wordArray;
+};
 
+
+
+ingredientFormEl.addEventListener("submit", recipeSubmitHandler);
+ingredientFormEl.addEventListener("submit", ingredientSubmission);
 // 1. create ul element in memory (var ul = document.createElement('ul'))
     // 2. loop through data.drinks
     // 3. for each drink, create li element
