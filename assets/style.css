@@ -1,6 +1,6 @@
-* {
+/* * {
 	border: solid red 2px;
-}
+} */
 
 body {
 	background-color: #e5e7eb;
@@ -14,3 +14,17 @@ header{
 	width: 100%;
 	text-align: center;
 }
+
+/* .border {
+	border: 5px solid #00D1B2;
+	display: inline-block;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+} */
+
+h5 {
+	display: inline;
+	padding: 5px;
+	margin:auto;
+  }
