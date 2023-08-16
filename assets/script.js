@@ -124,9 +124,6 @@ var ingredientSubmission = function(event){
   var wordArray = userIngredientEl.value.trim();
   console.log(wordArray);
     changeText.textContent = wordArray;
-  // var divEl = document.createElement('div');
-  // divEl.textContent = wordArray;
-  // ingredientContainerEl.appendChild(divEl);
 };
 
 
