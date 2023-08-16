@@ -57,3 +57,70 @@ window.onload = function () {
   // Send the API request
   request.send();
 };
+
+// code for recipe container 
+var ingredientFormEl = document.querySelector('#ingredient-form');
+var userIngredientEl = document.querySelector('#user-ingredients');
+var recipeContainerEl = document.querySelector('#recipe-container');
+
+var recipeSubmitHandler = function (event) {
+  console.log(event);
+  event.preventDefault();
+
+  let recipe = userIngredientEl.value.trim();
+
+  if (recipe) {
+    getRecipe(recipe);
+    recipeContainerEl.value = '';
+    // If ingredient is invalid, error message will display and function will stop running
+  } else {
+    recipeContainerEl.textContent = 'Please enter a valid ingredient';
+    return;
+  }
+};
+
+
+var getRecipe = function (recipe) {
+  var apiUrl = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=' + recipe;
+
+  fetch(apiUrl).then(function (response) {
+    return response.json();
+  }).then(function (data) {
+    displayRecipes(data.drinks);
+    });
+  };
+
+
+var displayRecipes = function (drinks) {
+  // 1. Create ul element in memory
+  var ul = document.createElement('ul');
+
+  // 2. Loop through data.drinks
+  for (var i = 0; i < drinks.length; i++) {
+    // 3. Create li element for each drink
+    var li = document.createElement('li');
+
+    // 4. Create anchor element (<a>) for each drink
+    var drinkLink = document.createElement('a');
+    drinkLink.textContent = drinks[i].strDrink;
+    drinkLink.href = 'recipe.html?drink=' + encodeURIComponent(drinks[i].strDrink); // Create a URL with the drink name as a parameter
+
+    // 5. Append anchor to li
+    li.appendChild(drinkLink);
+
+    // 6. Append li to ul
+    ul.appendChild(li);
+  }
+
+  // 7. Append ul to recipeContainerEl
+  recipeContainerEl.innerHTML = ''; // Clear previous content
+  recipeContainerEl.appendChild(ul);
+};
+
+ingredientFormEl.addEventListener("submit", recipeSubmitHandler);
+
+// 1. create ul element in memory (var ul = document.createElement('ul'))
+    // 2. loop through data.drinks
+    // 3. for each drink, create li element
+    // 4. append li to ul 
+    // 5. when loop finished, append ul to recipeContainerEl
